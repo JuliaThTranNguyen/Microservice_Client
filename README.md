@@ -89,9 +89,17 @@ in the client directory.
 
 - Create a new Heroku app by running heroku create.
 
-- Add the mars/create-react-app buildpack to your app by running heroku buildpacks:set mars/create-react-app.
+- Add the mars/create-react-app buildpack to your app by running:
 
-- Add the nodejs buildpack to your app by running heroku buildpacks:add --index 1 heroku/nodejs.
+```
+heroku buildpacks:set mars/create-react-app -a th-julia-microservice
+```
+
+- Add the nodejs buildpack to your app by running:
+
+```
+heroku buildpacks:add --index 1 heroku/nodejs
+```
 
 - In your Procfile, add the following line:
 
