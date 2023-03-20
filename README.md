@@ -60,11 +60,12 @@ This Module will cover the React Application for Client Side.
 
 - Client service at "localhost://3000"
 
-![Screenshot from 2023-03-16 21-22-10](https://user-images.githubusercontent.com/49017322/226344763-9abb2783-88a7-46da-8af1-e8a1a0960b09.png)
+![Screenshot from 2023-03-20 14-50-44](https://user-images.githubusercontent.com/49017322/226345606-e67cddfc-5680-45fb-a709-700a609b4e6c.png)
+
 
 - Client service for Springboot server:
 
-![Screenshot from 2023-03-18 22-49-28](https://user-images.githubusercontent.com/49017322/226344981-ab999145-4e09-4cb3-86d2-8c3eb9113177.png)
+![Screenshot from 2023-03-20 14-57-30](https://user-images.githubusercontent.com/49017322/226345633-23e3c9f1-68ea-497c-8a63-6ad144e7b9fa.png)
 
 
 ### [Heroku Deployment:](https://julia-microservice.herokuapp.com/)
