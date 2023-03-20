@@ -85,7 +85,11 @@ npm run build
 in the client directory.
 - Create a new Git repository for your project and commit your changes.
 
-- Install the Heroku CLI if you haven't already done so, and log in to your Heroku account by running heroku login.
+- Install the Heroku CLI if you haven't already done so, and log in to your Heroku account by running:
+
+```
+heroku login
+```
 
 - Create a new Heroku app by running heroku create.
 
