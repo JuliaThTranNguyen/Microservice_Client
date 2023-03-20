@@ -58,11 +58,16 @@ This Module will cover the React Application for Client Side.
 
 ![Screenshot from 2023-03-18 22-49-41](https://user-images.githubusercontent.com/49017322/226147141-6b265a88-4fe5-4ab1-92a8-52e356b4afae.png)
 
+- Client service at "localhost://3000"
+![Screenshot from 2023-03-16 21-22-10](https://user-images.githubusercontent.com/49017322/226344763-9abb2783-88a7-46da-8af1-e8a1a0960b09.png)
 
-### Heroku Deployment:
+- Client service for Springboot server:
+![Screenshot from 2023-03-18 22-49-28](https://user-images.githubusercontent.com/49017322/226344981-ab999145-4e09-4cb3-86d2-8c3eb9113177.png)
 
-[Visit at](https://microservice-th-julia.herokuapp.com/)
 
+###[Heroku Deployment:](https://julia-microservice.herokuapp.com/)
+At the moment the Heroku app is crashing due to out of memory heaps.
+Pls be patient & wait for the next update! :heart:
 
 ## Extra dependencies & packages in used
 
@@ -78,11 +83,13 @@ npm i react-router-dom
 ### Prepare your React App for Heroku deployment
 To deploy a React application on Heroku, you can follow these steps:
 
-- Make sure you have created a production build of your React application by running
+- Make sure you have created a production build of your React application by running:
+
 ```
 npm run build
 ```
 in the client directory.
+
 - Create a new Git repository for your project and commit your changes.
 
 - Install the Heroku CLI if you haven't already done so, and log in to your Heroku account by running:
@@ -91,54 +98,42 @@ in the client directory.
 heroku login
 ```
 
-- Create a new Heroku app by running heroku create.
+- Create a new Heroku app by running:
+
+```
+heroku create
+```
 
 - Add the mars/create-react-app buildpack to your app by running:
 
 ```
-heroku buildpacks:set mars/create-react-app -a th-julia-microservice
+heroku buildpacks:set mars/create-react-app -a < name-of-your-app >
 ```
 
-- Add the nodejs buildpack to your app by running:
+- Add a Procfile to your app, save it as the parent level 
 
 ```
-heroku buildpacks:add --index 1 heroku/nodejs
-```
-
-- In your Procfile, add the following line:
-
-```
-web: npm start --prefix client.
-```
-- Set the NPM_CONFIG_PRODUCTION environment variable to false by running:
-
-```
-heroku config:set NPM_CONFIG_PRODUCTION=false
-```
-
-- Install the serve package by running:
-
-```
-npm install --save serve
-```
-
-- Add a start script to your package.json file with the following command:
-
-```
-"start": "serve -s build"
+web: npm start
 ```
 
 - Commit your changes and push them to Heroku by running:
 
 ```
-git push heroku main
+git push heroku master
+```
+
+- Then you can also check for the logs by using:
+
+```
+heroku open
 ```
 
 - Once the deployment is complete, open your app by running:
 
 ```
-heroku open
+heroku logs --tail
 ```
+
 
 As for addons, it depends on the specific requirements of your application. However, some common addons for a React app might include a database addon like Heroku Postgres, a logging addon like Papertrail, and a monitoring addon like New Relic. You can add addons using the Heroku CLI by running heroku addons:create <addon-name>.
 
